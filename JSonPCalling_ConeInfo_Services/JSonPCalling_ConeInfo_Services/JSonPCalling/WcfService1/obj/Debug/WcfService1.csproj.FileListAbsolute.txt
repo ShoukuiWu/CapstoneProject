@@ -1,0 +1,14 @@
+D:\temp\JSonPCalling\JSonPCalling\WcfService1\bin\WcfService1.dll
+D:\temp\JSonPCalling\JSonPCalling\WcfService1\bin\WcfService1.pdb
+D:\temp\JSonPCalling\JSonPCalling\WcfService1\obj\Debug\WcfService1.dll
+D:\temp\JSonPCalling\JSonPCalling\WcfService1\obj\Debug\WcfService1.pdb
+G:\Cons\CAD2\INFO8105 - Systems Development Project\04.Coding\JSonPCalling\JSonPCalling\JSonPCalling\WcfService1\bin\WcfService1.dll
+G:\Cons\CAD2\INFO8105 - Systems Development Project\04.Coding\JSonPCalling\JSonPCalling\JSonPCalling\WcfService1\bin\WcfService1.pdb
+G:\Cons\CAD2\INFO8105 - Systems Development Project\04.Coding\JSonPCalling\JSonPCalling\JSonPCalling\WcfService1\obj\Debug\WcfService1.dll
+G:\Cons\CAD2\INFO8105 - Systems Development Project\04.Coding\JSonPCalling\JSonPCalling\JSonPCalling\WcfService1\obj\Debug\WcfService1.pdb
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\bin\WcfService1.dll
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\bin\WcfService1.pdb
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\bin\EntityFramework.dll
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\bin\EntityFramework.xml
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\obj\Debug\WcfService1.dll
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\obj\Debug\WcfService1.pdb

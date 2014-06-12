@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ConeInfoManagement.Models.SearchLog>
+
+@{
+    ViewBag.Title = "Results of Analytics & Metrics: Keyword(" + ViewBag.keyword + ")";    
+}
+
+<h2>@ViewBag.Title</h2>
+<table>
+    <tr>
+        <th>
+            Query
+        </th>
+        <th>
+            Search Count
+        </th>
+        <th></th>
+        <th>
+            Date
+        </th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.query)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.searchResultCount)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.searchDate)
+        </td>
+    </tr>
+}
+</table>
+<p>@Html.ActionLink("Back to List", "Index")</p>

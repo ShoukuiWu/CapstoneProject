@@ -1,0 +1,89 @@
+﻿@model ConeInfoManagement.Models.Account
+
+@{
+    ViewBag.Title = "Delete of Account Information";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Account</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.logonId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logonId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.passwd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.passwd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.logonName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logonName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.logonHours)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logonHours)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.logoffHours)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logoffHours)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.logonStatus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logonStatus)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.startDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.startDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.endDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.endDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.roles)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.roles)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Person.firstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Person.firstName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

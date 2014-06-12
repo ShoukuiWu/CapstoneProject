@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CONEINFOModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CONEINFOContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="CONEINFOModel.Account" />
+    <EntitySet Name="AnalyticsMetrics" EntityType="CONEINFOModel.AnalyticsMetric" />
+    <EntitySet Name="Countries" EntityType="CONEINFOModel.Country" />
+    <EntitySet Name="Employees" EntityType="CONEINFOModel.Employee" />
+    <EntitySet Name="Keywords" EntityType="CONEINFOModel.Keyword" />
+    <EntitySet Name="People" EntityType="CONEINFOModel.Person" />
+    <EntitySet Name="Provinces" EntityType="CONEINFOModel.Province" />
+    <EntitySet Name="Searches" EntityType="CONEINFOModel.Search" />
+    <EntitySet Name="SearchLogs" EntityType="CONEINFOModel.SearchLog" />
+    <AssociationSet Name="Account_Person_FK" Association="CONEINFOModel.Account_Person_FK">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="Person_Country_FK" Association="CONEINFOModel.Person_Country_FK">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="Province_Country_FK" Association="CONEINFOModel.Province_Country_FK">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Province" EntitySet="Provinces" />
+    </AssociationSet>
+    <AssociationSet Name="Employee_Person_FK" Association="CONEINFOModel.Employee_Person_FK">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="Search_Keyword_FK" Association="CONEINFOModel.Search_Keyword_FK">
+      <End Role="Keyword" EntitySet="Keywords" />
+      <End Role="Search" EntitySet="Searches" />
+    </AssociationSet>
+    <AssociationSet Name="SearchLog_Keyword_FK" Association="CONEINFOModel.SearchLog_Keyword_FK">
+      <End Role="Keyword" EntitySet="Keywords" />
+      <End Role="SearchLog" EntitySet="SearchLogs" />
+    </AssociationSet>
+    <AssociationSet Name="Person_Province_FK" Association="CONEINFOModel.Person_Province_FK">
+      <End Role="Province" EntitySet="Provinces" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="SearchLog_Search_FK" Association="CONEINFOModel.SearchLog_Search_FK">
+      <End Role="Search" EntitySet="Searches" />
+      <End Role="SearchLog" EntitySet="SearchLogs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="logonId" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="passwd" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="logonName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="logonHours" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="logoffHours" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="logonStatus" Type="Boolean" Nullable="false" />
+    <Property Name="startDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="endDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="roles" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="personNumber" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="CONEINFOModel.Account_Person_FK" FromRole="Account" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="AnalyticsMetric">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="true" />
+    <Property Name="alpha2Code" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="true" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="People" Relationship="CONEINFOModel.Person_Country_FK" FromRole="Country" ToRole="Person" />
+    <NavigationProperty Name="Provinces" Relationship="CONEINFOModel.Province_Country_FK" FromRole="Country" ToRole="Province" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="officeNumber" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="departmentName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="personNumber" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="CONEINFOModel.Employee_Person_FK" FromRole="Employee" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Keyword">
+    <Key>
+      <PropertyRef Name="type" />
+    </Key>
+    <Property Name="type" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Searches" Relationship="CONEINFOModel.Search_Keyword_FK" FromRole="Keyword" ToRole="Search" />
+    <NavigationProperty Name="SearchLogs" Relationship="CONEINFOModel.SearchLog_Keyword_FK" FromRole="Keyword" ToRole="SearchLog" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="lastName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="displayName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="phoneHome" Type="String" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="phoneOffice" Type="String" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="phoneMobile" Type="String" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="street" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="city" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="provinceCode" Type="String" MaxLength="2" Unicode="true" FixedLength="true" />
+    <Property Name="countryCode" Type="String" MaxLength="3" Unicode="true" FixedLength="true" />
+    <Property Name="postalCode" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="collegeEmail" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="personalEmail" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Accounts" Relationship="CONEINFOModel.Account_Person_FK" FromRole="Person" ToRole="Account" />
+    <NavigationProperty Name="Country" Relationship="CONEINFOModel.Person_Country_FK" FromRole="Person" ToRole="Country" />
+    <NavigationProperty Name="Employees" Relationship="CONEINFOModel.Employee_Person_FK" FromRole="Person" ToRole="Employee" />
+    <NavigationProperty Name="Province" Relationship="CONEINFOModel.Person_Province_FK" FromRole="Person" ToRole="Province" />
+  </EntityType>
+  <EntityType Name="Province">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="true" />
+    <Property Name="countryCode" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="true" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Country" Relationship="CONEINFOModel.Province_Country_FK" FromRole="Province" ToRole="Country" />
+    <NavigationProperty Name="People" Relationship="CONEINFOModel.Person_Province_FK" FromRole="Province" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Search">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="question" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="answer" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="url" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="top10" Type="Int32" Nullable="false" />
+    <Property Name="keywordType" Type="Int32" />
+    <NavigationProperty Name="Keyword" Relationship="CONEINFOModel.Search_Keyword_FK" FromRole="Search" ToRole="Keyword" />
+    <NavigationProperty Name="SearchLogs" Relationship="CONEINFOModel.SearchLog_Search_FK" FromRole="Search" ToRole="SearchLog" />
+  </EntityType>
+  <EntityType Name="SearchLog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="query" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="searchResultCount" Type="Int32" Nullable="false" />
+    <Property Name="searchDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="keywordType" Type="Int32" />
+    <Property Name="searchId" Type="Int32" />
+    <NavigationProperty Name="Keyword" Relationship="CONEINFOModel.SearchLog_Keyword_FK" FromRole="SearchLog" ToRole="Keyword" />
+    <NavigationProperty Name="Search" Relationship="CONEINFOModel.SearchLog_Search_FK" FromRole="SearchLog" ToRole="Search" />
+  </EntityType>
+  <Association Name="Account_Person_FK">
+    <End Role="Person" Type="CONEINFOModel.Person" Multiplicity="1" />
+    <End Role="Account" Type="CONEINFOModel.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="number" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="personNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Person_Country_FK">
+    <End Role="Country" Type="CONEINFOModel.Country" Multiplicity="0..1" />
+    <End Role="Person" Type="CONEINFOModel.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="code" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="countryCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Province_Country_FK">
+    <End Role="Country" Type="CONEINFOModel.Country" Multiplicity="1" />
+    <End Role="Province" Type="CONEINFOModel.Province" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="code" />
+      </Principal>
+      <Dependent Role="Province">
+        <PropertyRef Name="countryCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Employee_Person_FK">
+    <End Role="Person" Type="CONEINFOModel.Person" Multiplicity="1" />
+    <End Role="Employee" Type="CONEINFOModel.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="number" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="personNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Search_Keyword_FK">
+    <End Role="Keyword" Type="CONEINFOModel.Keyword" Multiplicity="0..1" />
+    <End Role="Search" Type="CONEINFOModel.Search" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Keyword">
+        <PropertyRef Name="type" />
+      </Principal>
+      <Dependent Role="Search">
+        <PropertyRef Name="keywordType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SearchLog_Keyword_FK">
+    <End Role="Keyword" Type="CONEINFOModel.Keyword" Multiplicity="0..1" />
+    <End Role="SearchLog" Type="CONEINFOModel.SearchLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Keyword">
+        <PropertyRef Name="type" />
+      </Principal>
+      <Dependent Role="SearchLog">
+        <PropertyRef Name="keywordType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Person_Province_FK">
+    <End Role="Province" Type="CONEINFOModel.Province" Multiplicity="0..1" />
+    <End Role="Person" Type="CONEINFOModel.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Province">
+        <PropertyRef Name="code" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="provinceCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SearchLog_Search_FK">
+    <End Role="Search" Type="CONEINFOModel.Search" Multiplicity="0..1" />
+    <End Role="SearchLog" Type="CONEINFOModel.SearchLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Search">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SearchLog">
+        <PropertyRef Name="searchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CONEINFOModelStoreContainer" CdmEntityContainer="CONEINFOContext">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="CONEINFOModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="logonId" ColumnName="logonId" />
+          <ScalarProperty Name="passwd" ColumnName="passwd" />
+          <ScalarProperty Name="logonName" ColumnName="logonName" />
+          <ScalarProperty Name="logonHours" ColumnName="logonHours" />
+          <ScalarProperty Name="logoffHours" ColumnName="logoffHours" />
+          <ScalarProperty Name="logonStatus" ColumnName="logonStatus" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="roles" ColumnName="roles" />
+          <ScalarProperty Name="personNumber" ColumnName="personNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnalyticsMetrics">
+      <EntityTypeMapping TypeName="CONEINFOModel.AnalyticsMetric">
+        <MappingFragment StoreEntitySet="AnalyticsMetrics">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="CONEINFOModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="alpha2Code" ColumnName="alpha2Code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="CONEINFOModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="officeNumber" ColumnName="officeNumber" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="personNumber" ColumnName="personNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Keywords">
+      <EntityTypeMapping TypeName="CONEINFOModel.Keyword">
+        <MappingFragment StoreEntitySet="Keyword">
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="CONEINFOModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="displayName" ColumnName="displayName" />
+          <ScalarProperty Name="phoneHome" ColumnName="phoneHome" />
+          <ScalarProperty Name="phoneOffice" ColumnName="phoneOffice" />
+          <ScalarProperty Name="phoneMobile" ColumnName="phoneMobile" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="provinceCode" ColumnName="provinceCode" />
+          <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+          <ScalarProperty Name="postalCode" ColumnName="postalCode" />
+          <ScalarProperty Name="collegeEmail" ColumnName="collegeEmail" />
+          <ScalarProperty Name="personalEmail" ColumnName="personalEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provinces">
+      <EntityTypeMapping TypeName="CONEINFOModel.Province">
+        <MappingFragment StoreEntitySet="Province">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Searches">
+      <EntityTypeMapping TypeName="CONEINFOModel.Search">
+        <MappingFragment StoreEntitySet="Search">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="top10" ColumnName="top10" />
+          <ScalarProperty Name="keywordType" ColumnName="keywordType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SearchLogs">
+      <EntityTypeMapping TypeName="CONEINFOModel.SearchLog">
+        <MappingFragment StoreEntitySet="SearchLog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="query" ColumnName="query" />
+          <ScalarProperty Name="searchResultCount" ColumnName="searchResultCount" />
+          <ScalarProperty Name="searchDate" ColumnName="searchDate" />
+          <ScalarProperty Name="keywordType" ColumnName="keywordType" />
+          <ScalarProperty Name="searchId" ColumnName="searchId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ConeInfoManagement.Models.AnalyticsMetric>
+
+@{
+    ViewBag.Title = "Lists of Analytics & Metrics";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.type)*@
+            @Html.DisplayName("Keyword")
+        </th>
+        <th></th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.date)*@
+            @Html.DisplayName("Date")
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.description)*@
+            @Html.DisplayName("Description")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id }) |
+            @Html.ActionLink("Results of Analytics & Metrics", "Result", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

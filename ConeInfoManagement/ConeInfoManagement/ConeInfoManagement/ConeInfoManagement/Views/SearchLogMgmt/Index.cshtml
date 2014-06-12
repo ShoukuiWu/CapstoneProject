@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ConeInfoManagement.Models.SearchLog>
+
+@{
+    ViewBag.Title = "Lists of SearchLog Information";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.query)*@
+            @Html.DisplayName("Query")
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.searchResultCount)*@
+            @Html.DisplayName("Search Count")
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.searchDate)*@
+            @Html.DisplayName("Date")
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Keyword.name)*@
+            @Html.DisplayName("Keyword")
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Search.question)*@
+            @Html.DisplayName("Question")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.query)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.searchResultCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.searchDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Keyword.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Search.question)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,108 @@
+﻿@model ConeInfoManagement.Models.Account
+
+@{
+    ViewBag.Title = "Create of Account Information";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Account</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.logonId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.logonId)
+            @Html.ValidationMessageFor(model => model.logonId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.passwd)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.passwd)
+            @Html.ValidationMessageFor(model => model.passwd)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.logonName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.logonName)
+            @Html.ValidationMessageFor(model => model.logonName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.logonHours)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.logonHours)
+            @Html.ValidationMessageFor(model => model.logonHours)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.logoffHours)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.logoffHours)
+            @Html.ValidationMessageFor(model => model.logoffHours)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.logonStatus)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.logonStatus)
+            @Html.ValidationMessageFor(model => model.logonStatus)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.startDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.startDate)
+            @Html.ValidationMessageFor(model => model.startDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.endDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.endDate)
+            @Html.ValidationMessageFor(model => model.endDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.roles)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.roles)
+            @Html.ValidationMessageFor(model => model.roles)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.personNumber, "Person")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("personNumber", String.Empty)
+            @Html.ValidationMessageFor(model => model.personNumber)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

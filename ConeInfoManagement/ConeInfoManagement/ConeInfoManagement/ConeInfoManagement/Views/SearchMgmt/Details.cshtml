@@ -1,0 +1,50 @@
+﻿@model ConeInfoManagement.Models.Search
+
+@{
+    ViewBag.Title = "Details of Search Information";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<fieldset>
+    <legend>Search</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.question)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.question)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.answer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.answer)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.url)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.url)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.top10)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.top10)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Keyword.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Keyword.name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

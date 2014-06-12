@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConeInfoManagement", "ConeInfoManagement\ConeInfoManagement.csproj", "{4577E959-C239-4A5E-8D43-33525F1CAB0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConeInfoManagement.Tests", "ConeInfoManagement.Tests\ConeInfoManagement.Tests.csproj", "{119289A2-9FF5-4113-B626-C20B9399CE8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4577E959-C239-4A5E-8D43-33525F1CAB0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4577E959-C239-4A5E-8D43-33525F1CAB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4577E959-C239-4A5E-8D43-33525F1CAB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4577E959-C239-4A5E-8D43-33525F1CAB0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{119289A2-9FF5-4113-B626-C20B9399CE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{119289A2-9FF5-4113-B626-C20B9399CE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{119289A2-9FF5-4113-B626-C20B9399CE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{119289A2-9FF5-4113-B626-C20B9399CE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

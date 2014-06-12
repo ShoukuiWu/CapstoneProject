@@ -1,0 +1,54 @@
+﻿@model ConeInfoManagement.Models.SearchLog
+
+@{
+    ViewBag.Title = "Delete of SearchLog Information";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>SearchLog</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.query)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.query)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.searchResultCount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.searchResultCount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.searchDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.searchDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Keyword.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Keyword.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Search.question)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Search.question)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

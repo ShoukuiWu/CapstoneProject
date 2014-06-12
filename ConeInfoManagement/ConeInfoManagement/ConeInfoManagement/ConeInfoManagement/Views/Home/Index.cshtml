@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Conestoga Info Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+<h3>We inform the following:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Administrator Perform <a href="/SearchMgmt/Index"><span style="color:red">Search Management</span></a> on Database.</h5>
+        You can makes it easy to manage search related data on database system.
+    </li>
+
+    <li class="two">
+        <h5>Administrator Perform <a href="/AccountMgmt/Index"><span style="color:red">User Account Management</span></a>.</h5>
+        You can makes it easy to add and update your account information.
+    </li>
+
+    <li class="three">
+        <h5>Administrator Perform <a href="/AnalyticsMetricsMgmt/Index"><span style="color:red">Analytics/Metrics Management</span></a> based on Search Log.</h5>
+        You can easily find search log's data that offers the statistics of features
+        for Analytics and Metrics.
+    </li>
+</ol>

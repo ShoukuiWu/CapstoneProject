@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+Service="WcfServiceConeInfo.ServiceConeInfo" 
+CodeBehind="ServiceConeInfo.svc.cs"
+Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory"  %>

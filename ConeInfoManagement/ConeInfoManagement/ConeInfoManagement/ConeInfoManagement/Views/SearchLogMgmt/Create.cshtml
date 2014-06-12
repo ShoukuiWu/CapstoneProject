@@ -1,0 +1,68 @@
+﻿@model ConeInfoManagement.Models.SearchLog
+
+@{
+    ViewBag.Title = "Create of SearchLog Information";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>SearchLog</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.query)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.query)
+            @Html.ValidationMessageFor(model => model.query)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.searchResultCount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.searchResultCount)
+            @Html.ValidationMessageFor(model => model.searchResultCount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.searchDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.searchDate)
+            @Html.ValidationMessageFor(model => model.searchDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.keywordType, "Keyword")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("keywordType", String.Empty)
+            @Html.ValidationMessageFor(model => model.keywordType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.searchId, "Search")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("searchId", String.Empty)
+            @Html.ValidationMessageFor(model => model.searchId)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

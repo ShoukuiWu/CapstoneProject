@@ -1,0 +1,85 @@
+﻿@model ConeInfoManagement.Models.Account
+
+@{
+    ViewBag.Title = "Details of Account Information";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<fieldset>
+    <legend>Account</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.logonId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logonId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.passwd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.passwd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.logonName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logonName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.logonHours)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logonHours)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.logoffHours)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logoffHours)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.logonStatus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logonStatus)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.startDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.startDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.endDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.endDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.roles)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.roles)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Person.firstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Person.firstName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

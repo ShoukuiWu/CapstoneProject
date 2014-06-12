@@ -1,0 +1,36 @@
+﻿@model ConeInfoManagement.Models.AnalyticsMetric
+
+@{
+    ViewBag.Title = "Details of Analytics & Metrics: Keyword(" + ViewBag.keyword + ")";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<fieldset>
+    <legend>AnalyticsMetric</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.type)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

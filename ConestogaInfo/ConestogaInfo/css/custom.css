@@ -1,0 +1,50 @@
+/*
+ * Custom CSS
+ */
+
+
+img { max-width: 100%; }
+
+.red { color : red; }
+
+label.error {
+	color: #F00;
+	font-weight: bold;
+}
+
+input.error, select.error, textarea.error {
+	border: 1px red solid;
+}
+
+.ui-input-text {
+	width: 80% !important;
+
+}
+
+#controlgroup {
+	float: right;
+}
+
+#main{
+	clear: both;
+}
+
+#summaryTitle {
+	font-weight: bold;
+	color: red;
+}
+
+#emailForm input{
+	height: 30px;
+	width: 60%;
+}
+
+h4{
+	color: #a23400;
+	
+}
+
+h5{
+	color: #000079  ;
+	
+}

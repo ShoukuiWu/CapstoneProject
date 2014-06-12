@@ -1,0 +1,19 @@
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\bin\WcfService1.dll
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\bin\WcfService1.pdb
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\bin\EntityFramework.dll
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\bin\EntityFramework.xml
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\obj\Debug\WcfService1.dll
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\obj\Debug\WcfService1.pdb
+C:\Temp\JSonPCalling\JSonPCalling\WcfService1\obj\Debug\WcfServiceConeInfo.csprojResolveAssemblyReference.cache
+C:\Temp\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\bin\WcfService1.dll
+C:\Temp\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\bin\WcfService1.pdb
+C:\Temp\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\bin\EntityFramework.dll
+C:\Temp\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\bin\EntityFramework.xml
+C:\Temp\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\obj\Debug\WcfService1.dll
+C:\Temp\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\obj\Debug\WcfService1.pdb
+D:\My Documents\Conestoga College\CAD_2014\INFO8105-Project\deliveries\04.Coding\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\bin\WcfService1.dll
+D:\My Documents\Conestoga College\CAD_2014\INFO8105-Project\deliveries\04.Coding\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\bin\WcfService1.pdb
+D:\My Documents\Conestoga College\CAD_2014\INFO8105-Project\deliveries\04.Coding\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\bin\EntityFramework.dll
+D:\My Documents\Conestoga College\CAD_2014\INFO8105-Project\deliveries\04.Coding\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\bin\EntityFramework.xml
+D:\My Documents\Conestoga College\CAD_2014\INFO8105-Project\deliveries\04.Coding\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\obj\Debug\WcfService1.dll
+D:\My Documents\Conestoga College\CAD_2014\INFO8105-Project\deliveries\04.Coding\JSonPCalling_ConeInfo_Services\JSonPCalling\WcfService1\obj\Debug\WcfService1.pdb
